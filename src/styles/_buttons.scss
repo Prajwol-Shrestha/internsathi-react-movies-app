@@ -1,0 +1,4 @@
+.btn{
+    @include flex(center, center);
+    padding: .25em .5em;
+}

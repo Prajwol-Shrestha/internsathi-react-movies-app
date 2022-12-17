@@ -1,0 +1,15 @@
+.hero-section{
+    
+    .search-bar{
+        @include flex(center,stretch);
+
+        input{
+            padding: 1em .5em;
+            width: 70vw;
+        }
+        .search-btn{
+            padding: 0 2em;
+        }
+
+    }
+}

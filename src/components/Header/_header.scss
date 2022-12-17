@@ -1,0 +1,26 @@
+header{
+    background-color: rgba(17, 19, 17, 0.5);
+    @include flex(center, center);
+    position: fixed;
+    width: 100%;
+
+    color: white;
+
+    
+    .navbar{
+        @include flex(space-between, center);
+
+        .nav-links{
+            @include flex(center, center);
+            gap: 1em;
+
+            .nav-link{
+                cursor: pointer;
+            }
+            .nav-link:focus,
+            .nav-link:hover{
+                opacity: 0.8;
+            }
+        }
+    }
+}

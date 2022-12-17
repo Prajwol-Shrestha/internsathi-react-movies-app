@@ -1,0 +1,80 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25em 0.5em;
+}
+
+header {
+  background-color: rgba(17, 19, 17, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  color: white;
+}
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .navbar .nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+header .navbar .nav-links .nav-link {
+  cursor: pointer;
+}
+header .navbar .nav-links .nav-link:focus,
+header .navbar .nav-links .nav-link:hover {
+  opacity: 0.8;
+}
+
+.hero-section .search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+.hero-section .search-bar input {
+  padding: 1em 0.5em;
+  width: 70vw;
+}
+.hero-section .search-bar .search-btn {
+  padding: 0 2em;
+}/*# sourceMappingURL=index.css.map */
