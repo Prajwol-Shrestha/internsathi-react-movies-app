@@ -5,7 +5,6 @@ export default function ListOfMovies({query}) {
     const [searchResult, setSearchResult] = useState([])
     const [loading, setLoading] = useState(true)
     const [queryData, setQuery] = useState(query)
-    // const queryData = query
 
     useEffect( () => {fetchData()}, [] )
 

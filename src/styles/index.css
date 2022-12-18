@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap");
 *, *::before, *::after {
   box-sizing: border-box;
   font-family: inherit;
@@ -41,21 +42,34 @@ ul {
   height: 400px;
 }
 
+* {
+  font-family: "Poppins", sans-serif;
+}
+
 .heading {
   color: rgba(255, 255, 255, 0.95);
+  margin: 0.5em;
+  letter-spacing: 0.05rem;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  text-transform: capitalize;
 }
 
 .sub-heading {
   color: white;
   text-align: center;
+  text-transform: capitalize;
+  font-size: clamp(1.15rem, 1.65vw, 2.15rem);
 }
 
 .title {
   color: rgba(255, 255, 255, 0.7);
+  text-transform: capitalize;
+  font-size: clamp(1rem, 0.85vw, 2rem);
 }
 
 .para {
   color: rgba(255, 255, 255, 0.65);
+  font-size: clamp(0.85rem, 0.65vw, 1.85rem);
 }
 
 .btn {
@@ -93,6 +107,9 @@ header .navbar .nav-links .nav-link:hover {
   opacity: 0.8;
 }
 
+.hero-section .heading {
+  text-align: center;
+}
 .hero-section .search-bar {
   display: flex;
   justify-content: center;
@@ -132,6 +149,11 @@ header .navbar .nav-links .nav-link:hover {
 }
 .movie-section .grid-container .movie-card .detail .btn {
   margin-top: 1em;
+}
+
+.detail .btn,
+.not-found .btn {
+  margin: 0 auto;
 }
 
 .movie-section .movie-details {

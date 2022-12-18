@@ -1,16 +1,30 @@
+*{
+    font-family: $font-family;
+}
+
 .heading{
     color: rgba($color: $secondary, $alpha: 0.95);
+    margin: 0.5em;
+    letter-spacing: .05rem;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    text-transform: capitalize;
 }
 
 .sub-heading{
     color: rgba($color: $secondary, $alpha: 1);
     text-align: center;
+    text-transform: capitalize;
+    font-size: clamp(1.15rem, 1.65vw, 2.15rem);
+
 }
 
 .title{
     color: rgba($color: $secondary, $alpha: 0.7);
+    text-transform: capitalize;
+    font-size: clamp(1rem, 0.85vw, 2rem);
 }
 
 .para{
     color: rgba($color: $secondary, $alpha: 0.65);
+    font-size: clamp(0.85rem, 0.65vw, 1.85rem);
 }

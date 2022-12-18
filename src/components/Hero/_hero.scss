@@ -1,4 +1,8 @@
 .hero-section{
+
+    .heading{
+        text-align: center;
+    }
     
     .search-bar{
         @include flex(center,stretch);
