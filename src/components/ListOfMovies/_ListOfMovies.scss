@@ -1,0 +1,17 @@
+.list-of-movie-section{
+    padding-top: 10vh;
+    background-color: rgba(0,0,0,0.8);
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 16em);
+        grid-auto-rows: auto;
+        justify-content: center;
+        gap: 1em;
+
+        .movie-card{
+            background-color: rgba(0,0,0,0.8);
+            padding: 2em;
+        }
+    }
+}

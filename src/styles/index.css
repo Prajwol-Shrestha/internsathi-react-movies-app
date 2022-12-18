@@ -31,6 +31,10 @@ ul {
   align-items: center;
 }
 
+.heading {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .btn {
   display: flex;
   justify-content: center;
@@ -77,4 +81,20 @@ header .navbar .nav-links .nav-link:hover {
 }
 .hero-section .search-bar .search-btn {
   padding: 0 2em;
+}
+
+.list-of-movie-section {
+  padding-top: 10vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.list-of-movie-section .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 16em);
+  grid-auto-rows: auto;
+  justify-content: center;
+  gap: 1em;
+}
+.list-of-movie-section .grid-container .movie-card {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2em;
 }/*# sourceMappingURL=index.css.map */
