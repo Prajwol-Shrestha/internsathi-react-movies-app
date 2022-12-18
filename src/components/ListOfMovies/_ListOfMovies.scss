@@ -1,6 +1,11 @@
-.list-of-movie-section{
+.movie-section{
     padding-top: 10vh;
     background-color: rgba(0,0,0,0.8);
+
+    .not-found{
+        @include flex(center, center);
+        flex-direction: column;
+    }
 
     .grid-container{
         display: grid;
@@ -11,7 +16,16 @@
 
         .movie-card{
             background-color: rgba(0,0,0,0.8);
-            padding: 2em;
+            padding: 1em 1.5em;
+
+            .detail{
+               .title{
+                margin: 0.5em 0;
+               }
+               .btn{
+                margin-top: 1em;
+               }
+            }
         }
     }
 }

@@ -1,16 +1,17 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 
-
-
 export default function ListOfMovies({query}) {
     const [searchResult, setSearchResult] = useState([])
     const [loading, setLoading] = useState(true)
+    const [queryData, setQuery] = useState(query)
+    // const queryData = query
 
     useEffect( () => {fetchData()}, [] )
 
+
     async function fetchData(){
-        const res = await fetch(`https://www.omdbapi.com/?s=${query}&apikey=5147931f`)
+        const res = await fetch(`https://www.omdbapi.com/?s=${queryData}&apikey=5147931f`)
         const data = await res.json()
         setSearchResult(data)
         setLoading(false)
@@ -22,12 +23,12 @@ export default function ListOfMovies({query}) {
                 return (searchResult.Search.map( (result, i) => {
                     return (
                         <div className='movie-card' key={i}>
-                            <img src={result.Poster} />
-                            <div className='movie-detail'>
-                                <h2> {result.Title} </h2>
-                                <h3> Type: {result.Type} </h3>
-                                <h3> Year: {result.Year} </h3>
-                                <h3> imdbId: {result.imdbID} </h3>
+                            <img src={result.Poster} className="poster-img"/>
+                            <div className='detail'>
+                                <h2 className='sub-heading'> {result.Title} </h2>
+                                <p className='title'> <b> Type: </b> {result.Type} </p>
+                                <p className='title'> <b> Year: </b> {result.Year} </p>
+                                <p className='title'> <b> imdbId: </b> {result.imdbID} </p>
                                 <Link to="/details" state={{ id: result.imdbID }}>
                                     <button className='btn'> View More Details </button>
                                 </Link>
@@ -36,15 +37,23 @@ export default function ListOfMovies({query}) {
                     )
                 } ))
             }
-            return <h1> Movie not found! </h1>
+            return (
+                <div className='not-found'>
+                    <h2 className='sub-heading'> Movie Not Found </h2>
+                    <Link to="/">
+                        <button className='btn'> Back to Home </button>
+                    </Link>
+                </div>
+                
+            )
         }
         return <h2> Loading... </h2>
     }
 
   return (
-    <section className='section list-of-movie-section'>
+    <section className='section movie-section'>
         <div className='container'>
-            <h1 className='heading'> Search Results for: {query} </h1>
+            <h1 className='heading'> Search Results for: {queryData} </h1>
             <hr></hr>
             <div className='grid-container'>
                {displayResult()}

@@ -12,15 +12,19 @@ export default function Hero({query, setQuery}) {
     backgroundSize: 'cover'
   }
 
+  function handleSubmit(e){
+    e.preventDefault()
+    handleClick()
+  }
 
 
   return (
     <section className='hero-section section' style={BgStyle}>
       <div>
         <h1 className='heading'> Search your movie by title </h1>
-        <form className='search-bar'>
-          <input type='text' placeholder='Search...' value={query} onChange={(e) => setQuery(e.target.value)}/>
-            <button type='submit' className='btn search-btn' onClick={handleClick} > <BsSearch size={20} /> </button>
+        <form className='search-bar' onSubmit={(e) => handleSubmit(e)}>
+          <input type='text' placeholder='Search...' value={query} onChange={(e) => setQuery(e.target.value)} required/>
+            <button type='submit' className='btn search-btn'> <BsSearch size={20} /> </button>
         </form>
       </div>
     </section>

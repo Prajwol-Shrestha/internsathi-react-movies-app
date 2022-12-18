@@ -1,0 +1,30 @@
+.movie-section{
+
+    .movie-details{
+        max-width: 800px;
+        margin: 0 auto;
+        @include flex(center, center);
+        gap: 2em;
+
+        .poster-img{
+            height: 400px;
+            width: 40%;
+        }
+
+        .movie-conent{
+            width: 50%;
+        }
+    }
+
+}
+
+@media screen and(max-width: 500px) {
+    .movie-section{
+        .movie-details{
+            flex-direction: column;
+            .poster-img{
+                width: auto;
+            }
+        }
+    }
+}
