@@ -10,7 +10,7 @@ export default function ListOfMovies({query}) {
 
 
     async function fetchData(){
-        const res = await fetch(`https://www.omdbapi.com/?s=${queryData}&apikey=5147931f`)
+        const res = await fetch(`https://www.omdbapi.com/?s=${queryData.trim()}&apikey=5147931f`)
         const data = await res.json()
         setSearchResult(data)
         setLoading(false)
@@ -22,7 +22,7 @@ export default function ListOfMovies({query}) {
                 return (searchResult.Search.map( (result, i) => {
                     return (
                         <div className='movie-card' key={i}>
-                            <img src={result.Poster} className="poster-img"/>
+                            <img src={result.Poster} className="poster-img" alt={result.Title}/>
                             <div className='detail'>
                                 <h2 className='sub-heading'> {result.Title} </h2>
                                 <p className='title'> <b> Type: </b> {result.Type} </p>

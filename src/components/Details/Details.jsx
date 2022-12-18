@@ -17,7 +17,7 @@ export default function Details() {
     <section className='section movie-section'>
       <div className='container'>
         <div className='movie-details'>
-          <img src={data.Poster} className='poster-img'/>
+          <img src={data.Poster} className='poster-img' alt={data.Title}/>
           <div className='movie-content'>
             <h2 className='sub-heading'> {data.Title} </h2>
             <p className='title'> <b>Rated:</b> {data.Rated}</p>
