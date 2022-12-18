@@ -1,6 +1,10 @@
 .movie-section{
     padding-top: 10vh;
     background-color: rgba(0,0,0,0.8);
+    
+    .heading{
+        margin: 0;
+    }
 
     .not-found{
         @include flex(center, center);

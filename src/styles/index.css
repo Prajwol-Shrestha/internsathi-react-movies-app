@@ -21,6 +21,10 @@ ul {
   list-style: none;
 }
 
+hr {
+  margin: 0;
+}
+
 .container {
   width: 90%;
   margin: 0 auto;
@@ -48,7 +52,7 @@ ul {
 
 .heading {
   color: rgba(255, 255, 255, 0.95);
-  margin: 0.5em;
+  margin: 0.5em 0;
   letter-spacing: 0.05rem;
   font-size: clamp(1.5rem, 5vw, 2.5rem);
   text-transform: capitalize;
@@ -126,6 +130,9 @@ header .navbar .nav-links .nav-link:hover {
 .movie-section {
   padding-top: 10vh;
   background-color: rgba(0, 0, 0, 0.8);
+}
+.movie-section .heading {
+  margin: 0;
 }
 .movie-section .not-found {
   display: flex;

@@ -4,7 +4,7 @@
 
 .heading{
     color: rgba($color: $secondary, $alpha: 0.95);
-    margin: 0.5em;
+    margin: 0.5em 0;
     letter-spacing: .05rem;
     font-size: clamp(1.5rem, 5vw, 2.5rem);
     text-transform: capitalize;
